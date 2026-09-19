@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0;url=intro.html">
+    <meta name="description" content="Segundo Pinto - Full-Stack Developer">
+    <title>Segundo Pinto - Portfolio</title>
+    <link rel="canonical" href="https://segundopinto.dev">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0a0e27;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #e0e0e0;
+        }
+        .loader {
+            text-align: center;
+        }
+        .loader h1 {
+            font-size: 2rem;
+            color: #00d9ff;
+            margin-bottom: 1rem;
+        }
+        .loader p {
+            font-size: 1.1rem;
+            color: #b0bec5;
+            margin-bottom: 2rem;
+        }
+        .loading-dots {
+            display: inline-block;
+        }
+        .dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #00d9ff;
+            margin: 0 4px;
+            animation: bounce 1.4s infinite;
+        }
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes bounce {
+            0%, 80%, 100% {
+                transform: translateY(0);
+                opacity: 0.5;
+            }
+            40% {
+                transform: translateY(-10px);
+                opacity: 1;
+            }
+        }
+        a {
+            color: #00d9ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        a:hover {
+            color: #39ff14;
+            text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <h1>Loading Portfolio...</h1>
+        <p>Segundo Pinto - Full-Stack Developer</p>
+        <div class="loading-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <p style="margin-top: 2rem; font-size: 0.9rem;">
+            If it does not load automatically, <a href="intro.html">click here</a>
+        </p>
+    </div>
+
+    <script>
+        // Redirect to intro.html
+        window.location.href = 'intro.html';
+    </script>
+</body>
+</html>

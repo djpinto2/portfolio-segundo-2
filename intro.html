@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Segundo Pinto - Full-Stack Developer">
+    <title>Segundo Pinto - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            background: #0a0e27;
+        }
+
+        .intro-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Video Background */
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        /* Dark Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 14, 39, 0.4);
+            z-index: 2;
+        }
+
+        /* Content */
+        .intro-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            padding: 2rem;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #00d9ff;
+            object-fit: cover;
+            box-shadow: 0 0 30px rgba(0, 217, 255, 0.4);
+            animation: profilePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes profilePulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(0, 217, 255, 0.4); }
+            50%       { box-shadow: 0 0 50px rgba(0, 217, 255, 0.8); }
+        }
+
+        .intro-text h1 {
+            font-size: clamp(2rem, 8vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00d9ff 0%, #39ff14 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .intro-text p {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: #b0bec5;
+            max-width: 500px;
+        }
+
+        /* Progress Bar */
+        .progress-wrapper {
+            width: min(400px, 80vw);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #00d9ff, #39ff14);
+            border-radius: 99px;
+            box-shadow: 0 0 12px rgba(0, 217, 255, 0.6);
+            transition: width 50ms linear;
+        }
+
+        .progress-label {
+            font-size: 0.9rem;
+            color: #64b5f6;
+            letter-spacing: 2px;
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* Enter Button */
+        .enter-btn {
+            padding: 12px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0a0e27;
+            background: linear-gradient(135deg, #00d9ff 0%, #39ff14 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+        }
+
+        .enter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 40px rgba(0, 217, 255, 0.6), 0 0 20px rgba(57, 255, 20, 0.4);
+        }
+
+        .enter-btn.visible {
+            opacity: 1;
+            pointer-events: auto;
+            animation: slideUp 0.5s ease forwards;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .enter-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .intro-content { gap: 2rem; }
+            .profile-pic { width: 100px; height: 100px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-container">
+        <video class="video-bg" autoplay muted loop playsinline>
+            <source src="/multimedia/video.mp4" type="video/mp4">
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="intro-content">
+            <img src="/multimedia/profile.jpg" alt="Segundo Pinto" class="profile-pic">
+
+            <div class="intro-text">
+                <h1>SEGUNDO PINTO</h1>
+                <p>Full-Stack Developer | React • Next.js • TypeScript</p>
+            </div>
+
+            <div class="progress-wrapper">
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-label" id="progressLabel">0%</span>
+            </div>
+
+            <button class="enter-btn" id="enterBtn" onclick="enterPortfolio()">
+                Enter Portfolio
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Video autoplay with mobile fallback
+        const bgVideo = document.querySelector('.video-bg');
+        function tryPlay() {
+            bgVideo.play().catch(() => {
+                const resume = () => { bgVideo.play(); };
+                document.addEventListener('touchstart', resume, { once: true });
+                document.addEventListener('click', resume, { once: true });
+            });
+        }
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            tryPlay();
+        } else {
+            document.addEventListener('DOMContentLoaded', tryPlay);
+        }
+
+        const duration = 5000;
+        const interval = 50;
+        const steps = duration / interval;
+        let current = 0;
+
+        const fill = document.getElementById('progressFill');
+        const label = document.getElementById('progressLabel');
+
+        const timer = setInterval(() => {
+            current++;
+            const pct = Math.min(Math.round((current / steps) * 100), 100);
+            fill.style.width = pct + '%';
+            label.textContent = pct + '%';
+
+            if (pct >= 100) {
+                clearInterval(timer);
+                document.getElementById('enterBtn').classList.add('visible');
+            }
+        }, interval);
+
+        function enterPortfolio() {
+            const container = document.querySelector('.intro-container');
+            container.style.transition = 'opacity 0.5s ease';
+            container.style.opacity = '0';
+            setTimeout(() => { window.location.href = 'portfolio.html'; }, 500);
+        }
+
+        document.addEventListener('keypress', (e) => {
+            if (e.key === ' ' || e.key === 'Enter') {
+                e.preventDefault();
+                enterPortfolio();
+            }
+        });
+    </script>
+</body>
+</html>
