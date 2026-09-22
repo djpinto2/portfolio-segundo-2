@@ -1,19 +1,28 @@
-import Image from 'next/image';
-import Link from 'next/link';
+'use client';
+
+import { useState, useEffect } from 'react';
 
 export default function Hero() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <section id="home" className="hero py-20 px-4 bg-[var(--bg)]">
       <div className="container mx-auto max-w-2xl">
         <div className="hero__content text-center flex flex-col items-center gap-8">
           {/* Profile Photo */}
           <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-[var(--gold-2)]">
-            <Image
+            <img
               src="/profile.jpg"
               alt="Segundo Pinto"
-              fill
-              className="object-cover"
-              priority
+              className="w-full h-full object-cover"
             />
           </div>
 
@@ -34,18 +43,18 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="hero__cta flex gap-4 flex-wrap justify-center">
-            <Link 
+            <a 
               href="#portfolio" 
               className="btn btn--primary px-8 py-3 bg-[var(--gold-2)] text-[var(--bg)] font-semibold rounded-lg hover:bg-opacity-90 transition"
             >
               View My Projects
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="#contact" 
               className="btn btn--secondary px-8 py-3 border-2 border-[var(--gold-2)] text-[var(--gold-2)] font-semibold rounded-lg hover:bg-[var(--gold-2)]/10 transition"
             >
               Contact
-            </Link>
+            </a>
           </div>
 
           {/* Social Links */}
