@@ -1,73 +1,50 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-
 export default function Hero() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
   return (
-    <section id="home" className="hero py-20 px-4 bg-[var(--bg)]">
-      <div className="container mx-auto max-w-2xl">
-        <div className="hero__content text-center flex flex-col items-center gap-8">
+    <section id="home" className="py-24 px-4 md:py-32">
+      <div className="max-w-[1180px] mx-auto">
+        <div className="flex flex-col items-center text-center">
           {/* Profile Photo */}
-          <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-[var(--gold-2)]">
-            <img
-              src="/profile.jpg"
-              alt="Segundo Pinto"
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <img
+            src="profile.jpg"
+            alt="Segundo Pinto"
+            className="w-32 h-32 rounded-full object-cover mb-8 border-2 border-white"
+          />
 
           {/* Title */}
-          <h1 className="hero__title text-5xl md:text-6xl font-bold">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold-2)] to-[var(--accent)]">Segundo Pinto</span>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Hi, I'm <span style={{
+              background: 'linear-gradient(120deg, #00d9ff, #39ff14)',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>Segundo Pinto</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="hero__subtitle text-xl text-[var(--txt-2)]">
-            Full-Stack Developer specialized in React, Next.js and TypeScript
-          </p>
+          <p className="text-xl text-gray-300 mb-2">Full-Stack Developer specialized in React, Next.js and TypeScript</p>
 
           {/* Description */}
-          <p className="hero__description text-lg text-[var(--txt-3)] max-w-xl">
+          <p className="text-gray-400 mb-8 max-w-2xl">
             I build scalable, accessible, high-quality web experiences focused on performance and best practices.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="hero__cta flex gap-4 flex-wrap justify-center">
-            <a 
-              href="#portfolio" 
-              className="btn btn--primary px-8 py-3 bg-[var(--gold-2)] text-[var(--bg)] font-semibold rounded-lg hover:bg-opacity-90 transition"
-            >
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-4 mb-8 justify-center">
+            <a href="#portfolio" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white font-semibold rounded-lg hover:shadow-lg transition">
               View My Projects
             </a>
-            <a 
-              href="#contact" 
-              className="btn btn--secondary px-8 py-3 border-2 border-[var(--gold-2)] text-[var(--gold-2)] font-semibold rounded-lg hover:bg-[var(--gold-2)]/10 transition"
-            >
+            <a href="#contact" className="px-8 py-3 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition">
               Contact
             </a>
           </div>
 
           {/* Social Links */}
-          <div className="hero__socials flex gap-6">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-link text-[var(--txt-2)] hover:text-[var(--gold-2)] transition">
-              GitHub
-            </a>
-            <a href="https://linkedin.com/in/segundo-pinto" target="_blank" rel="noopener noreferrer" className="social-link text-[var(--txt-2)] hover:text-[var(--gold-2)] transition">
-              LinkedIn
-            </a>
-            <a href="mailto:djpintoarg@gmail.com" className="social-link text-[var(--txt-2)] hover:text-[var(--gold-2)] transition">
-              Email
-            </a>
+          <div className="flex gap-6">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">GitHub</a>
+            <a href="https://linkedin.com/in/segundo-pinto" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">LinkedIn</a>
+            <a href="mailto:djpintoarg@gmail.com" className="text-gray-400 hover:text-white transition">Email</a>
           </div>
         </div>
       </div>

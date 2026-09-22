@@ -1,18 +1,13 @@
-export default function About() {
-  const stats = [
-    { number: "2024", label: "Full-Stack Training" },
-    { number: "5+", label: "Completed Projects" },
-    { number: "100%", label: "Client Satisfaction" }
-  ];
+'use client';
 
+export default function About() {
   return (
-    <section id="about" className="about py-24 px-4 bg-[var(--bg)]">
-      <div className="container mx-auto max-w-6xl">
-        <div className="about__content grid md:grid-cols-2 gap-16 items-center">
-          {/* Text Content */}
-          <div className="about__text">
-            <h2 className="text-4xl font-bold text-[var(--txt-1)] mb-6">About Me</h2>
-            <div className="space-y-4 text-[var(--txt-3)]">
+    <section id="about" className="py-24 px-4">
+      <div className="max-w-[1180px] mx-auto">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-4xl font-bold mb-8">About Me</h2>
+            <div className="space-y-4 text-gray-400 leading-relaxed">
               <p>
                 I am a full-stack developer with professional training at Coderhouse. I specialize in building modern, scalable and accessible web applications using React, Next.js and TypeScript.
               </p>
@@ -25,17 +20,19 @@ export default function About() {
             </div>
           </div>
 
-          {/* Stats */}
-          <div className="about__stats grid grid-cols-1 gap-8">
-            {stats.map((stat, idx) => (
-              <div 
-                key={idx}
-                className="stat border-l-4 border-[var(--gold-2)] pl-6 py-2"
-              >
-                <h3 className="text-4xl font-bold text-[var(--gold-2)]">{stat.number}</h3>
-                <p className="text-[var(--txt-3)] text-lg">{stat.label}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-3 gap-8 text-center">
+            <div className="bg-gray-900 rounded-xl p-6">
+              <h3 className="text-3xl font-bold text-blue-400 mb-2">2024</h3>
+              <p className="text-gray-400 text-sm">Full-Stack Training</p>
+            </div>
+            <div className="bg-gray-900 rounded-xl p-6">
+              <h3 className="text-3xl font-bold text-blue-400 mb-2">5+</h3>
+              <p className="text-gray-400 text-sm">Completed Projects</p>
+            </div>
+            <div className="bg-gray-900 rounded-xl p-6">
+              <h3 className="text-3xl font-bold text-blue-400 mb-2">100%</h3>
+              <p className="text-gray-400 text-sm">Client Satisfaction</p>
+            </div>
           </div>
         </div>
       </div>
