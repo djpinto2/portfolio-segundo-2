@@ -7,7 +7,7 @@ export default function Hero() {
         <div className="flex flex-col items-center text-center">
           {/* Profile Photo */}
           <img
-            src="profile.jpg"
+            src="/multimedia/profile.jpg"
             alt="Segundo Pinto"
             className="w-32 h-32 rounded-full object-cover mb-8 border-2 border-white"
           />

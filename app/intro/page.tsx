@@ -56,7 +56,7 @@ export default function Intro() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0 opacity-60"
       >
-        <source src="video.mp4" type="video/mp4" />
+        <source src="/multimedia/video.mp4" type="video/mp4" />
       </video>
 
       {/* Dark Overlay */}
@@ -66,7 +66,7 @@ export default function Intro() {
       <div className="relative z-20 flex flex-col items-center gap-12 px-4 text-center">
         {/* Profile Photo */}
         <img
-          src="profile.jpg"
+          src="/multimedia/profile.jpg"
           alt="Segundo Pinto"
           className="w-32 h-32 rounded-full object-cover border-4 border-cyan-400 shadow-lg"
           style={{
