@@ -14,7 +14,7 @@ export default function Portfolio() {
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-3">KAELO DJ - DJ Profile & Events</h3>
               <p className="text-gray-400 mb-6">Professional website for a DJ specialized in House, Tech House and Afro Tech. Includes online booking, event gallery and dynamic animations.</p>
-              <a href="https://kaeloar.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 font-semibold">View Project →</a>
+              <a href="https://presskit-kaelo.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 font-semibold">View Project →</a>
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden bg-gray-900 hover:shadow-2xl transition">
@@ -22,7 +22,7 @@ export default function Portfolio() {
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-3">CRG Historia - Educational Platform</h3>
               <p className="text-gray-400 mb-6">Modern educational platform with responsive design and interactive content. Optimized for conversion and user experience.</p>
-              <a href="https://crgestoria.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 font-semibold">View Project →</a>
+              <a href="https://cr-gestoria.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 font-semibold">View Project →</a>
             </div>
           </div>
         </div>
