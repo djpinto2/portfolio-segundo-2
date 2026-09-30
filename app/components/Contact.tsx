@@ -94,7 +94,7 @@ export default function Contact() {
                 <a href="https://github.com" target="_blank" rel="noopener" className="text-[var(--gold-2)] hover:text-[var(--gold-2)]/80 transition">
                   GitHub
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener" className="text-[var(--gold-2)] hover:text-[var(--gold-2)]/80 transition">
+                <a href="https://www.linkedin.com/in/segundo-pinto-428b28287/" target="_blank" rel="noopener" className="text-[var(--gold-2)] hover:text-[var(--gold-2)]/80 transition">
                   LinkedIn
                 </a>
                 <a href="https://twitter.com" target="_blank" rel="noopener" className="text-[var(--gold-2)] hover:text-[var(--gold-2)]/80 transition">

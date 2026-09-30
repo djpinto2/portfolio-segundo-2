@@ -43,7 +43,7 @@ export default function Hero() {
           {/* Social Links */}
           <div className="flex gap-6">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">GitHub</a>
-            <a href="https://linkedin.com/in/segundo-pinto" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/segundo-pinto-428b28287/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">LinkedIn</a>
             <a href="mailto:djpintoarg@gmail.com" className="text-gray-400 hover:text-white transition">Email</a>
           </div>
         </div>
