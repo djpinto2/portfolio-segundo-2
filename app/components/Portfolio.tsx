@@ -10,7 +10,7 @@ export default function Portfolio() {
         {/* Featured Projects */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="rounded-2xl overflow-hidden bg-gray-900 hover:shadow-2xl transition">
-            <div className="h-64 md:h-72" style={{background: 'linear-gradient(135deg, #ff006e 0%, #06ffa5 100%)'}}></div>
+            <a href="https://presskit-kaelo.vercel.app/" target="_blank" rel="noopener noreferrer" className="block aspect-[16/10] overflow-hidden" aria-label="Vista previa del sitio KAELO DJ Press Kit"><img src="/projects/kaelo.jpg" alt="Vista previa del sitio KAELO DJ Press Kit" loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" /></a>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-3">KAELO DJ - DJ Profile & Events</h3>
               <p className="text-gray-400 mb-6">Professional website for a DJ specialized in House, Tech House and Afro Tech. Includes online booking, event gallery and dynamic animations.</p>
@@ -18,7 +18,7 @@ export default function Portfolio() {
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden bg-gray-900 hover:shadow-2xl transition">
-            <div className="h-64 md:h-72" style={{background: 'linear-gradient(135deg, #3a86ff 0%, #06ffa5 100%)'}}></div>
+            <a href="https://cr-gestoria.vercel.app/" target="_blank" rel="noopener noreferrer" className="block aspect-[16/10] overflow-hidden" aria-label="Vista previa del sitio CR Gestiones del Automotor"><img src="/projects/crg.jpg" alt="Vista previa del sitio CR Gestiones del Automotor" loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" /></a>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-3">CRG Historia - Educational Platform</h3>
               <p className="text-gray-400 mb-6">Modern educational platform with responsive design and interactive content. Optimized for conversion and user experience.</p>
@@ -26,7 +26,7 @@ export default function Portfolio() {
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden bg-gray-900 hover:shadow-2xl transition">
-            <div className="h-64 md:h-72" style={{background: 'linear-gradient(135deg, #0a0a0a 0%, #c8ff3d 100%)'}}></div>
+            <a href="https://booth-dj-shop.vercel.app/" target="_blank" rel="noopener noreferrer" className="block aspect-[16/10] overflow-hidden" aria-label="Vista previa del sitio BOOTH Pro DJ Supply"><img src="/projects/booth.jpg" alt="Vista previa del sitio BOOTH Pro DJ Supply" loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" /></a>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-3">BOOTH - Pro DJ Gear Shop</h3>
               <p className="text-gray-400 mb-6">E-commerce concept for club-standard DJ equipment. Video hero, category filters, full spec sheets per product, persistent cart and demo checkout. Built with Next.js 16 and Tailwind 4.</p>
