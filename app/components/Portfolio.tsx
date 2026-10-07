@@ -20,8 +20,8 @@ export default function Portfolio() {
           <div className="rounded-2xl overflow-hidden bg-gray-900 hover:shadow-2xl transition">
             <a href="https://cr-gestoria.vercel.app/" target="_blank" rel="noopener noreferrer" className="block aspect-[16/10] overflow-hidden" aria-label="Vista previa del sitio CR Gestiones del Automotor"><img src="/projects/crg.jpg" alt="Vista previa del sitio CR Gestiones del Automotor" loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" /></a>
             <div className="p-8">
-              <h3 className="text-2xl font-bold mb-3">CRG Historia - Educational Platform</h3>
-              <p className="text-gray-400 mb-6">Modern educational platform with responsive design and interactive content. Optimized for conversion and user experience.</p>
+              <h3 className="text-2xl font-bold mb-3">CR Gestiones - Vehicle Paperwork Online</h3>
+              <p className="text-gray-400 mb-6">Website for a licensed vehicle registration agency in Buenos Aires. Online requests for title reports, transfers and traffic fines, with Mercado Pago payments and WhatsApp contact. Responsive and conversion-focused.</p>
               <a href="https://cr-gestoria.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 font-semibold">View Project →</a>
             </div>
           </div>
