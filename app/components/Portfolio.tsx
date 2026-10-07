@@ -8,7 +8,7 @@ export default function Portfolio() {
         <p className="text-gray-400 text-center mb-16 text-lg">Featured projects built with modern technologies</p>
 
         {/* Featured Projects */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="rounded-2xl overflow-hidden bg-gray-900 hover:shadow-2xl transition">
             <div className="h-64 md:h-72" style={{background: 'linear-gradient(135deg, #ff006e 0%, #06ffa5 100%)'}}></div>
             <div className="p-8">
@@ -23,6 +23,14 @@ export default function Portfolio() {
               <h3 className="text-2xl font-bold mb-3">CRG Historia - Educational Platform</h3>
               <p className="text-gray-400 mb-6">Modern educational platform with responsive design and interactive content. Optimized for conversion and user experience.</p>
               <a href="https://cr-gestoria.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 font-semibold">View Project →</a>
+            </div>
+          </div>
+          <div className="rounded-2xl overflow-hidden bg-gray-900 hover:shadow-2xl transition">
+            <div className="h-64 md:h-72" style={{background: 'linear-gradient(135deg, #0a0a0a 0%, #c8ff3d 100%)'}}></div>
+            <div className="p-8">
+              <h3 className="text-2xl font-bold mb-3">BOOTH - Pro DJ Gear Shop</h3>
+              <p className="text-gray-400 mb-6">E-commerce concept for club-standard DJ equipment. Video hero, category filters, full spec sheets per product, persistent cart and demo checkout. Built with Next.js 16 and Tailwind 4.</p>
+              <a href="https://booth-dj-shop.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 font-semibold">View Project →</a>
             </div>
           </div>
         </div>
