@@ -40,13 +40,19 @@ html {
 body {
     font-family: var(--font-sans);
     background-color: var(--color-dark);
-    background-image: linear-gradient(rgba(10, 14, 39, 0.75), rgba(10, 14, 39, 0.75)), url('pixels.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     color: var(--color-text);
     line-height: 1.6;
+}
+
+/* Fondo fijo en su propia capa: con background-attachment: fixed el navegador
+   repintaba la imagen entera en cada scroll */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(rgba(10, 14, 39, 0.75), rgba(10, 14, 39, 0.75)), url('pixels.jpg') center / cover no-repeat;
+    pointer-events: none;
 }
 
 /* CONTAINER */
@@ -151,6 +157,7 @@ body {
     height: 1000px;
     background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
     animation: float 8s ease-in-out infinite;
+    will-change: transform;
 }
 
 @keyframes float {
@@ -174,19 +181,15 @@ body {
     border: 3px solid var(--color-primary);
     object-fit: cover;
     margin-bottom: 2rem;
-    box-shadow: 0 0 30px rgba(0, 217, 255, 0.4);
+    box-shadow: 0 0 40px rgba(0, 217, 255, 0.6);
     animation: profileFloat 3s ease-in-out infinite;
+    will-change: transform;
 }
 
+/* Solo transform: animar box-shadow repinta en cada cuadro */
 @keyframes profileFloat {
-    0%, 100% {
-        transform: translateY(0px);
-        box-shadow: 0 0 30px rgba(0, 217, 255, 0.4);
-    }
-    50% {
-        transform: translateY(-10px);
-        box-shadow: 0 0 50px rgba(0, 217, 255, 0.8);
-    }
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
 }
 
 .hero__title {

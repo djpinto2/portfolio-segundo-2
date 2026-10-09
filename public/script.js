@@ -57,12 +57,12 @@ if (contactForm) {
     });
 }
 
-// Scroll animations for navbar
+// Scroll animations for navbar (solo toca el estilo cuando cambia el estado)
+const navbar = document.querySelector('.navbar');
+let navScrolled = null;
 window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.borderBottomColor = 'rgba(0, 217, 255, 0.3)';
-    } else {
-        navbar.style.borderBottomColor = 'var(--color-border)';
-    }
-});
+    const scrolled = window.scrollY > 50;
+    if (scrolled === navScrolled) return;
+    navScrolled = scrolled;
+    navbar.style.borderBottomColor = scrolled ? 'rgba(0, 217, 255, 0.3)' : 'var(--color-border)';
+}, { passive: true });
