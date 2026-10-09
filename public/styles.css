@@ -303,6 +303,24 @@ section {
     margin-bottom: 3rem;
 }
 
+/* INTRO VIDEO SECTION */
+.intro-video__frame {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow);
+    background: #000;
+}
+
+.intro-video__frame video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
 /* PORTFOLIO SECTION */
 .portfolio {
     background: linear-gradient(180deg, rgba(0, 217, 255, 0.02) 0%, rgba(168, 85, 247, 0.02) 100%);
