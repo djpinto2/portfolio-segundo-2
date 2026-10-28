@@ -8,7 +8,25 @@ export default function Portfolio() {
         <p className="text-gray-400 text-center mb-16 text-lg">Featured projects built with modern technologies</p>
 
         {/* Featured Projects */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="rounded-2xl overflow-hidden bg-gray-900 hover:shadow-2xl transition">
+            <a href="https://abundance-bot-nu.vercel.app/" target="_blank" rel="noopener noreferrer" className="block aspect-[16/10] overflow-hidden" aria-label="Vista previa del bot de WhatsApp de ABUNDANCE"><img src="/projects/abundance-bot.jpg" alt="Vista previa del bot de WhatsApp de ABUNDANCE" loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" /></a>
+            <div className="p-8">
+              <h3 className="text-2xl font-bold mb-3">ABUNDANCE Bot - WhatsApp Lead Capture</h3>
+              <p className="text-gray-400 mb-6">WhatsApp chatbot for an events company, built on Meta&apos;s Cloud API. Guides customers through a 5-step quote with interactive buttons, stores leads in Supabase, alerts the owner instantly and shows them in a protected admin dashboard. Signed webhooks and unit-tested logic.</p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {['Next.js', 'TypeScript', 'WhatsApp Cloud API', 'Supabase', 'Vitest'].map(tech => (
+                  <span key={tech} className="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="flex gap-6">
+                <a href="https://abundance-bot-nu.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 font-semibold">View Project →</a>
+                <a href="https://github.com/djpinto2/abundance-bot" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 font-semibold">Code →</a>
+              </div>
+            </div>
+          </div>
           <div className="rounded-2xl overflow-hidden bg-gray-900 hover:shadow-2xl transition">
             <a href="https://presskit-kaelo.vercel.app/" target="_blank" rel="noopener noreferrer" className="block aspect-[16/10] overflow-hidden" aria-label="Vista previa del sitio KAELO DJ Press Kit"><img src="/projects/kaelo.jpg" alt="Vista previa del sitio KAELO DJ Press Kit" loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" /></a>
             <div className="p-8">
